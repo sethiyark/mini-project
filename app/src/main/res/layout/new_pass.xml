@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/enter_new_password"
+        android:textSize="30sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/new_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/new_confirm_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_password_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="2dp"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/new_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/Submit_new_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_confirm_password_layout"
+        android:onClick="newPassword"
+        android:padding="5dp"
+        android:text="@string/submit" />
+
+</RelativeLayout>

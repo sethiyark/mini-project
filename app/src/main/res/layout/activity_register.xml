@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin"
+            tools:context="com.example.raunaksethiya.reviewsys1.RegisterActivity">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <EditText
+                    android:id="@+id/Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/full_name"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Email_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Name_layout"
+                android:layout_alignStart="@+id/Name_layout"
+                android:layout_below="@+id/Name_layout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/Sign_up"
+                    android:layout_below="@+id/Sign_up"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Phone_Num_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Email_Layout"
+                android:layout_alignStart="@+id/Email_Layout"
+                android:layout_below="@+id/Email_Layout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/Phone_Num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/User_Name_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Phone_Num_Layout"
+                android:layout_alignStart="@+id/Phone_Num_Layout"
+                android:layout_below="@+id/Phone_Num_Layout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/User_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/username"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Password_New_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/User_Name_Layout"
+                android:layout_alignStart="@+id/User_Name_Layout"
+                android:layout_below="@+id/User_Name_Layout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/Password_New"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/Password_Confirm_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Password_New_Layout"
+                android:layout_alignStart="@+id/Password_New_Layout"
+                android:layout_below="@+id/Password_New_Layout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/Password_Confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/confirm_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/Sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Password_Confirm_layout"
+                android:layout_alignStart="@+id/Password_Confirm_layout"
+                android:layout_below="@+id/Password_Confirm_layout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/sign_up" />
+
+            <Button
+                android:id="@+id/Back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Sign_up"
+                android:layout_alignStart="@+id/Sign_up"
+                android:layout_below="@+id/Sign_up"
+                android:onClick="goBack"
+                android:text="@string/back" />
+
+            <TextView
+                android:id="@+id/haveOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Back"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="@string/have_otp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

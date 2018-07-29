@@ -1,0 +1,162 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.raunaksethiya.reviewsys1.MyPlacesActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/myplaces_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/myplaces_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:tabIndicatorColor="@color/white"
+            app:tabMode="scrollable"></android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/content_main"
+        layout="@layout/my_places_content_main" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        app:layout_anchor="@id/content_main"
+        app:layout_anchorGravity="bottom|end">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/ascRatingFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:onClick="onAscRatingFabClick1"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/trending_up_white_192x192" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/desRatingFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:onClick="onDesRatingFabClick1"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/trending_down_white_192x192" />
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/byRatingFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:clickable="true"
+                android:onClick="onRatingFabClick1"
+                android:visibility="visible"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/star_outline_white_192x192" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/ascAlphaFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:onClick="onAscAlphaFabClick1"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/trending_up_white_192x192" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/desAlphaFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:onClick="onDesAlphaFabClick1"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/trending_down_white_192x192" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/byAlphaFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:clickable="true"
+                android:onClick="onAlphaFabClick1"
+                android:visibility="visible"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/sort_by_alpha_white_192x192" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/toMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:onClick="onMapClicked1"
+                android:src="@drawable/map_white_192x192"
+                app:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/baseFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:clickable="true"
+                android:onClick="onSortFabClick1"
+                android:padding="@dimen/activity_horizontal_margin"
+                app:fabSize="normal"
+                app:srcCompat="@drawable/sort_white_192x192" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
